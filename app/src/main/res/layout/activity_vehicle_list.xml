@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".VehicleListActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_red_bar_vehicle_list"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FF0000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_lector_placas_title_vehicle_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sistema de lector de placas"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_vehicle_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista de vehículos\nregistrados"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_red_bar_vehicle_list" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_vehicle_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_border_grey"
+        app:layout_constraintBottom_toTopOf="@+id/btn_nuevo_vehicle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vehicle_list_title"
+        tools:listitem="@layout/item_vehicle" />
+
+    <Button
+        android:id="@+id/btn_nuevo_vehicle"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="nuevo"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2196F3"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_eliminar_vehicle" />
+
+    <Button
+        android:id="@+id/btn_editar_vehicle"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Editar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2196F3"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_eliminar_vehicle" />
+
+    <Button
+        android:id="@+id/btn_eliminar_vehicle"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:text="eliminar"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:backgroundTint="#FF0000"
+        android:layout_marginBottom="30dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

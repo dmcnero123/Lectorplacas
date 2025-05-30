@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".PersonalDashboardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_red_bar_personal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FF0000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_lector_placas_title_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sistema de lector de placas"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_nombre_personal_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del personal"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_red_bar_personal" />
+
+    <ImageView
+        android:id="@+id/iv_vehiculo"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:background="#E0E0E0"  android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_personal_dashboard"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <EditText
+        android:id="@+id/et_placa"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:hint="D9F-620"
+        android:gravity="center"
+        android:inputType="textCapCharacters"
+        android:textSize="28sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_vehiculo" />
+
+    <Button
+        android:id="@+id/btn_capturar"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Capturar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#00C853"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_placa" />
+
+    <Button
+        android:id="@+id/btn_confirmar"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Confirmar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2196F3"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_placa" />
+    <Button
+        android:id="@+id/btn_nuevo_vehiculo"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:text="Nuevo Vehículo"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2196F3"
+        android:layout_marginTop="20dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_capturar" />
+
+    <Button
+        android:id="@+id/btn_lista_ingresantes_personal"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FF0000"
+        android:text="Lista de ingresantes"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nuevo_vehiculo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
